@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>my country name is rakib hasan</h1> <br>
+    <h3 id="clg">my inistitute name is KPI </h3>
+    <button onclick="textChange()">Address</button>
+    <button id="login">Deperment</button>
+    <script>
+        // option 1
+        function textChange() {
+            const text = document.getElementById('clg');
+            text.innerText='Kurigram inistitute';
+        }
+        // option 2
+        document.getElementById('login').addEventListener('click', function(){
+            const textagain=document.getElementById('clg');
+            textagain.innerText='CMT'
+        })
+    </script>
+</body>
+
+</html>
