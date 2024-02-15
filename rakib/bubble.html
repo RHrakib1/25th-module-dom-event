@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>expolor bubble</title>
+    <style>
+        ul {
+            border: 2px solid tomato;
+        }
+
+        #item-2 {
+            border: 2px solid blue;
+        }
+
+        body {
+            border: 2px solid black;
+        }
+
+        section {
+            border: 2px solid tomato;
+        }
+    </style>
+</head>
+
+<body id="body">
+    <h1>expolor to the html in bubble</h1>
+    <section id="container">
+        <ul id="li-container">
+            <li id="item-1">Lorem, ipsum.</li>
+            <li id="item-2">Est, id?</li>
+            <li id="item-3">Aliquam, nisi?</li>
+            <li id="item-4">Porro, optio!</li>
+            <li id="item-5">Atque, modi.</li>
+            <li id="item-6">Dignissimos, praesentium.</li>
+        </ul>
+    </section>
+    <!-- bubble hoile li a click krle li,ul,section,body agula pabo  -->
+    <script>
+        // stop propargation krle sudhu oitai paoya jabe seta te stop use kora hobe 
+        document.getElementById('item-2').addEventListener('click', function (event) {
+            console.log('item-2 start click')
+            event.stopPropagation();
+        })
+
+
+        // start stop porpargation
+        // stop popargation use krle oi laval a ja ja ase sob asbe r jodi stopImmediatePropagation use krle kono sudhu oita hbe
+        document.getElementById('item-2').addEventListener('click', function (event) {
+            console.log('item-2 click');
+            event.stopImmediatePropagation();
+        })
+        document.getElementById('item-2').addEventListener('click', function (event) {
+            console.log('item-2 second click')
+        })
+        document.getElementById('item-2').addEventListener('click', function (event) {
+            console.log('item-2 third click')
+        })
+        // end propargation
+
+
+        document.getElementById('li-container').addEventListener('click', function () {
+            console.log('click li container')
+        })
+        document.getElementById('container').addEventListener('click', function () {
+            console.log('click to the container section')
+        })
+        document.getElementById('container').addEventListener('click', function () {
+            console.log('click to the body section')
+        })
+    </script>
+</body>
+
+</html>

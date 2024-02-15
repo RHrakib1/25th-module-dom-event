@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- coment a ksiu likhle ta 'p' a add hbe and comment boc clear hbe -->
+    <div id="section-container">
+        <p>Accusantium eum odit natus quisquam illo doloremque itaque impedit? Minima ratione nulla aliquam est voluptas
+            reiciendis aliquid animi voluptatem minus, unde modi non dolores eius nobis officiis provident dolorem
+            incidunt facere expedita ut? Aperiam rerum, repudiandae blanditiis laudantium sed magnam iste veniam quas
+            reprehenderit quisquam, harum omnis. Officiis, animi sit.</p>
+
+        <p>Accusantium eum odit natus quisquam illo doloremque itaque impedit? Minima ratione nulla aliquam est voluptas
+            reiciendis aliquid animi voluptatem minus, unde modi non dolores eius nobis officiis provident dolorem
+            incidunt facere expedita ut? Aperiam rerum, repudiandae blanditiis laudantium sed magnam iste veniam quas
+            reprehenderit quisquam, harum omnis. Officiis, animi sit.</p>
+
+        <p>Accusantium eum odit natus quisquam illo doloremque itaque impedit? Minima ratione nulla aliquam est voluptas
+            reiciendis aliquid animi voluptatem minus, unde modi non dolores eius nobis officiis provident dolorem
+            incidunt facere expedita ut? Aperiam rerum, repudiandae blanditiis laudantium sed magnam iste veniam quas
+            reprehenderit quisquam, harum omnis. Officiis, animi sit.</p>
+    </div>
+    <textarea name="" id="newComment" cols="50" rows="7"></textarea> <br><br>
+    <button id="uplode">post</button>
+    <script>
+        // step 1 : post btn a event set kora 
+        document.getElementById('uplode').addEventListener('click', function () {
+            // step 2: comment box ta add kora
+            const commentBox = document.getElementById('newComment');
+            // jodi input,textarea k use krbo tokhn vitor er text neoyar jonno value use krte hbe and jodi
+            //r onno onno khetre textArea use krte hbe 
+            const newComments = commentBox.value;
+
+            // step 3: commet k section er modh add kora 
+            // 1. commet container k add krte hbe
+            // 2. notun akti element make krte hbe ----> (p)
+            // 3. j element ta make krlam seta te text set krte hbe (innertex) diye
+            // 4. p tag k container er vitor add kora 
+            const sectionContainer = document.getElementById('section-container');
+            const stor = document.createElement('p');
+            stor.innerText = newComments;
+            sectionContainer.appendChild(stor);
+
+            // step 4:clear the commet box
+            commentBox.value=''
+
+
+        })
+    </script>
+</body>
+
+</html>

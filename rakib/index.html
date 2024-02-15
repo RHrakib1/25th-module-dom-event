@@ -8,22 +8,33 @@
 </head>
 
 <body>
-    <h1>my country name is rakib hasan</h1> <br>
+    <h1>my country name is rakib hasan</h1>
     <h3 id="clg">my inistitute name is KPI </h3>
+    <h4 id="header">defalt text</h4>
     <button onclick="textChange()">Address</button>
-    <button id="login">Deperment</button>
+    <button id="login">Deperment</button> <br><br>
+    <input id="input-filde" type="text">
+    <button id="form-update">updATE</button>
     <script>
+        // btn a lekha change kora hoi ki vabe ta dekhano hoilo
         // option 1
         function textChange() {
             const text = document.getElementById('clg');
-            text.innerText='Kurigram inistitute';
+            text.innerText = 'Kurigram inistitute';
         }
         // option 2
-        document.getElementById('login').addEventListener('click', function(){
-            const textagain=document.getElementById('clg');
-            textagain.innerText='CMT'
+        document.getElementById('login').addEventListener('click', function () {
+            const textagain = document.getElementById('clg');
+            textagain.innerText = 'CMT'
+        })
+
+        // option 2 again
+        document.getElementById('form-update').addEventListener('click', function () {
+            const inputFilde = document.getElementById('input-filde');
+            const inputText = inputFilde.value;
+            const h = document.getElementById('header');
+            h.innerText = inputText;
         })
     </script>
 </body>
-
 </html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>more events html</title>
+</head>
+
+<body>
+    <h1>Explore more event</h1>
+    <button id="btn-more">events</button>
+    <input id="text-feld" type="text">
+    <script>
+        // btn ba element er opor mouse niye gelei kaj krbe console a  
+        //      document.getElementById('btn-more').addEventListener('mouseenter', function(){
+        //          console.log('event triggered')
+        //      })
+
+
+        // btn ba element er opor mouse niye giye nara chara krle console a dekhabe 
+        //       document.getElementById('btn-more').addEventListener('mousemove', function(){
+        //           console.log('event triggered')
+        //       }) 
+
+
+        // kono box k focus korar jonno 
+        //        document.getElementById('text-feld').addEventListener('focus', function(){
+        //            console.log('event triggerd the box fouse')
+        //        })
+
+        // 'keyup' diye input  a ki likhtisi seta jante chaile amra keyup use krte pari.
+        document.getElementById('text-feld').addEventListener('keyup', function () {
+            console.log(event.target.value)
+        })
+    </script>
+</body>
+
+</html>
